@@ -30,9 +30,10 @@
         {
             this.mailGonderLabel = new System.Windows.Forms.Label();
             this.mailOnayLabel = new System.Windows.Forms.Label();
-            this.mailOnayıText = new System.Windows.Forms.TextBox();
+            this.mailOnayiText = new System.Windows.Forms.TextBox();
             this.mailGonderText = new System.Windows.Forms.TextBox();
             this.mailGonderButton = new System.Windows.Forms.Button();
+            this.mailKontrolButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mailGonderLabel
@@ -56,12 +57,12 @@
             this.mailOnayLabel.TabIndex = 3;
             this.mailOnayLabel.Text = "Mailinize Gelen Kodu Giriniz : ";
             // 
-            // mailOnayıText
+            // mailOnayiText
             // 
-            this.mailOnayıText.Location = new System.Drawing.Point(284, 174);
-            this.mailOnayıText.Name = "mailOnayıText";
-            this.mailOnayıText.Size = new System.Drawing.Size(221, 22);
-            this.mailOnayıText.TabIndex = 5;
+            this.mailOnayiText.Location = new System.Drawing.Point(284, 174);
+            this.mailOnayiText.Name = "mailOnayiText";
+            this.mailOnayiText.Size = new System.Drawing.Size(221, 22);
+            this.mailOnayiText.TabIndex = 5;
             // 
             // mailGonderText
             // 
@@ -83,18 +84,32 @@
             this.mailGonderButton.UseVisualStyleBackColor = false;
             this.mailGonderButton.Click += new System.EventHandler(this.mailGonderButton_Click);
             // 
+            // mailKontrolButton
+            // 
+            this.mailKontrolButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.mailKontrolButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mailKontrolButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.mailKontrolButton.Location = new System.Drawing.Point(388, 214);
+            this.mailKontrolButton.Name = "mailKontrolButton";
+            this.mailKontrolButton.Size = new System.Drawing.Size(117, 38);
+            this.mailKontrolButton.TabIndex = 7;
+            this.mailKontrolButton.Text = "KONTROL ET";
+            this.mailKontrolButton.UseVisualStyleBackColor = false;
+            this.mailKontrolButton.Click += new System.EventHandler(this.mailKontrolButton_Click);
+            // 
             // SifreUnuttu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 264);
+            this.ClientSize = new System.Drawing.Size(561, 290);
+            this.Controls.Add(this.mailKontrolButton);
             this.Controls.Add(this.mailGonderButton);
             this.Controls.Add(this.mailGonderText);
-            this.Controls.Add(this.mailOnayıText);
+            this.Controls.Add(this.mailOnayiText);
             this.Controls.Add(this.mailOnayLabel);
             this.Controls.Add(this.mailGonderLabel);
             this.Name = "SifreUnuttu";
-            this.Text = "MailGonder";
+            this.Text = "bu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,8 +118,9 @@
         #endregion
         private System.Windows.Forms.Label mailGonderLabel;
         private System.Windows.Forms.Label mailOnayLabel;
-        private System.Windows.Forms.TextBox mailOnayıText;
+        private System.Windows.Forms.TextBox mailOnayiText;
         private System.Windows.Forms.TextBox mailGonderText;
         private System.Windows.Forms.Button mailGonderButton;
+        private System.Windows.Forms.Button mailKontrolButton;
     }
 }

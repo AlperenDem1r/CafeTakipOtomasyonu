@@ -44,5 +44,10 @@ namespace CafeTakipOtomasyonu
         {
 
         }
+
+        private void masa1Button_Click(object sender, EventArgs e)
+        {
+              
+        }
     }
 }

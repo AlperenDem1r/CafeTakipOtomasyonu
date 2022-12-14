@@ -33,28 +33,28 @@
             this.button1 = new System.Windows.Forms.Button();
             this.uyeOlAnasayfa = new System.Windows.Forms.Button();
             this.masalarGroupBox = new System.Windows.Forms.GroupBox();
-            this.masa1Button = new System.Windows.Forms.Button();
-            this.masa2Button = new System.Windows.Forms.Button();
-            this.masa3Button = new System.Windows.Forms.Button();
-            this.masa4Button = new System.Windows.Forms.Button();
-            this.masa5Button = new System.Windows.Forms.Button();
-            this.masa6Button = new System.Windows.Forms.Button();
-            this.masa7Button = new System.Windows.Forms.Button();
-            this.masa8Button = new System.Windows.Forms.Button();
-            this.masa9Button = new System.Windows.Forms.Button();
             this.masa10Button = new System.Windows.Forms.Button();
+            this.masa9Button = new System.Windows.Forms.Button();
+            this.masa8Button = new System.Windows.Forms.Button();
+            this.masa7Button = new System.Windows.Forms.Button();
+            this.masa6Button = new System.Windows.Forms.Button();
+            this.masa5Button = new System.Windows.Forms.Button();
+            this.masa4Button = new System.Windows.Forms.Button();
+            this.masa3Button = new System.Windows.Forms.Button();
+            this.masa2Button = new System.Windows.Forms.Button();
+            this.masa1Button = new System.Windows.Forms.Button();
             this.urunlerGroupBox = new System.Windows.Forms.GroupBox();
-            this.yemeklerButton = new System.Windows.Forms.Button();
-            this.tatlılarButton = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iceceklerButton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tatlılarButton = new System.Windows.Forms.Button();
+            this.yemeklerButton = new System.Windows.Forms.Button();
             this.masalarGroupBox.SuspendLayout();
             this.urunlerGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // girisAnasayfa
@@ -117,101 +117,17 @@
             this.masalarGroupBox.TabStop = false;
             this.masalarGroupBox.Text = "MASALAR";
             // 
-            // masa1Button
+            // masa10Button
             // 
-            this.masa1Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.masa1Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.masa1Button.ForeColor = System.Drawing.Color.Snow;
-            this.masa1Button.Location = new System.Drawing.Point(45, 43);
-            this.masa1Button.Name = "masa1Button";
-            this.masa1Button.Size = new System.Drawing.Size(124, 74);
-            this.masa1Button.TabIndex = 0;
-            this.masa1Button.Text = "MASA 1";
-            this.masa1Button.UseVisualStyleBackColor = false;
-            // 
-            // masa2Button
-            // 
-            this.masa2Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.masa2Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.masa2Button.ForeColor = System.Drawing.Color.Snow;
-            this.masa2Button.Location = new System.Drawing.Point(261, 43);
-            this.masa2Button.Name = "masa2Button";
-            this.masa2Button.Size = new System.Drawing.Size(124, 74);
-            this.masa2Button.TabIndex = 1;
-            this.masa2Button.Text = "MASA 2";
-            this.masa2Button.UseVisualStyleBackColor = false;
-            // 
-            // masa3Button
-            // 
-            this.masa3Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.masa3Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.masa3Button.ForeColor = System.Drawing.Color.Snow;
-            this.masa3Button.Location = new System.Drawing.Point(45, 151);
-            this.masa3Button.Name = "masa3Button";
-            this.masa3Button.Size = new System.Drawing.Size(124, 74);
-            this.masa3Button.TabIndex = 2;
-            this.masa3Button.Text = "MASA 3";
-            this.masa3Button.UseVisualStyleBackColor = false;
-            // 
-            // masa4Button
-            // 
-            this.masa4Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.masa4Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.masa4Button.ForeColor = System.Drawing.Color.Snow;
-            this.masa4Button.Location = new System.Drawing.Point(261, 151);
-            this.masa4Button.Name = "masa4Button";
-            this.masa4Button.Size = new System.Drawing.Size(124, 74);
-            this.masa4Button.TabIndex = 3;
-            this.masa4Button.Text = "MASA 4";
-            this.masa4Button.UseVisualStyleBackColor = false;
-            // 
-            // masa5Button
-            // 
-            this.masa5Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.masa5Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.masa5Button.ForeColor = System.Drawing.Color.Snow;
-            this.masa5Button.Location = new System.Drawing.Point(45, 259);
-            this.masa5Button.Name = "masa5Button";
-            this.masa5Button.Size = new System.Drawing.Size(124, 74);
-            this.masa5Button.TabIndex = 4;
-            this.masa5Button.Text = "MASA 5";
-            this.masa5Button.UseVisualStyleBackColor = false;
-            // 
-            // masa6Button
-            // 
-            this.masa6Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.masa6Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.masa6Button.ForeColor = System.Drawing.Color.Snow;
-            this.masa6Button.Location = new System.Drawing.Point(261, 259);
-            this.masa6Button.Name = "masa6Button";
-            this.masa6Button.Size = new System.Drawing.Size(124, 74);
-            this.masa6Button.TabIndex = 5;
-            this.masa6Button.Text = "MASA 6";
-            this.masa6Button.UseVisualStyleBackColor = false;
-            // 
-            // masa7Button
-            // 
-            this.masa7Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.masa7Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.masa7Button.ForeColor = System.Drawing.Color.Snow;
-            this.masa7Button.Location = new System.Drawing.Point(45, 367);
-            this.masa7Button.Name = "masa7Button";
-            this.masa7Button.Size = new System.Drawing.Size(124, 74);
-            this.masa7Button.TabIndex = 6;
-            this.masa7Button.Text = "MASA 7";
-            this.masa7Button.UseVisualStyleBackColor = false;
-            // 
-            // masa8Button
-            // 
-            this.masa8Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.masa8Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.masa8Button.ForeColor = System.Drawing.Color.Snow;
-            this.masa8Button.Location = new System.Drawing.Point(261, 367);
-            this.masa8Button.Name = "masa8Button";
-            this.masa8Button.Size = new System.Drawing.Size(124, 74);
-            this.masa8Button.TabIndex = 7;
-            this.masa8Button.Text = "MASA 8";
-            this.masa8Button.UseVisualStyleBackColor = false;
+            this.masa10Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.masa10Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masa10Button.ForeColor = System.Drawing.Color.Snow;
+            this.masa10Button.Location = new System.Drawing.Point(261, 475);
+            this.masa10Button.Name = "masa10Button";
+            this.masa10Button.Size = new System.Drawing.Size(124, 74);
+            this.masa10Button.TabIndex = 9;
+            this.masa10Button.Text = "MASA 10";
+            this.masa10Button.UseVisualStyleBackColor = false;
             // 
             // masa9Button
             // 
@@ -225,17 +141,102 @@
             this.masa9Button.Text = "MASA 9";
             this.masa9Button.UseVisualStyleBackColor = false;
             // 
-            // masa10Button
+            // masa8Button
             // 
-            this.masa10Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.masa10Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.masa10Button.ForeColor = System.Drawing.Color.Snow;
-            this.masa10Button.Location = new System.Drawing.Point(261, 475);
-            this.masa10Button.Name = "masa10Button";
-            this.masa10Button.Size = new System.Drawing.Size(124, 74);
-            this.masa10Button.TabIndex = 9;
-            this.masa10Button.Text = "MASA 10";
-            this.masa10Button.UseVisualStyleBackColor = false;
+            this.masa8Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.masa8Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masa8Button.ForeColor = System.Drawing.Color.Snow;
+            this.masa8Button.Location = new System.Drawing.Point(261, 367);
+            this.masa8Button.Name = "masa8Button";
+            this.masa8Button.Size = new System.Drawing.Size(124, 74);
+            this.masa8Button.TabIndex = 7;
+            this.masa8Button.Text = "MASA 8";
+            this.masa8Button.UseVisualStyleBackColor = false;
+            // 
+            // masa7Button
+            // 
+            this.masa7Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.masa7Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masa7Button.ForeColor = System.Drawing.Color.Snow;
+            this.masa7Button.Location = new System.Drawing.Point(45, 367);
+            this.masa7Button.Name = "masa7Button";
+            this.masa7Button.Size = new System.Drawing.Size(124, 74);
+            this.masa7Button.TabIndex = 6;
+            this.masa7Button.Text = "MASA 7";
+            this.masa7Button.UseVisualStyleBackColor = false;
+            // 
+            // masa6Button
+            // 
+            this.masa6Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.masa6Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masa6Button.ForeColor = System.Drawing.Color.Snow;
+            this.masa6Button.Location = new System.Drawing.Point(261, 259);
+            this.masa6Button.Name = "masa6Button";
+            this.masa6Button.Size = new System.Drawing.Size(124, 74);
+            this.masa6Button.TabIndex = 5;
+            this.masa6Button.Text = "MASA 6";
+            this.masa6Button.UseVisualStyleBackColor = false;
+            // 
+            // masa5Button
+            // 
+            this.masa5Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.masa5Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masa5Button.ForeColor = System.Drawing.Color.Snow;
+            this.masa5Button.Location = new System.Drawing.Point(45, 259);
+            this.masa5Button.Name = "masa5Button";
+            this.masa5Button.Size = new System.Drawing.Size(124, 74);
+            this.masa5Button.TabIndex = 4;
+            this.masa5Button.Text = "MASA 5";
+            this.masa5Button.UseVisualStyleBackColor = false;
+            // 
+            // masa4Button
+            // 
+            this.masa4Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.masa4Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masa4Button.ForeColor = System.Drawing.Color.Snow;
+            this.masa4Button.Location = new System.Drawing.Point(261, 151);
+            this.masa4Button.Name = "masa4Button";
+            this.masa4Button.Size = new System.Drawing.Size(124, 74);
+            this.masa4Button.TabIndex = 3;
+            this.masa4Button.Text = "MASA 4";
+            this.masa4Button.UseVisualStyleBackColor = false;
+            // 
+            // masa3Button
+            // 
+            this.masa3Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.masa3Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masa3Button.ForeColor = System.Drawing.Color.Snow;
+            this.masa3Button.Location = new System.Drawing.Point(45, 151);
+            this.masa3Button.Name = "masa3Button";
+            this.masa3Button.Size = new System.Drawing.Size(124, 74);
+            this.masa3Button.TabIndex = 2;
+            this.masa3Button.Text = "MASA 3";
+            this.masa3Button.UseVisualStyleBackColor = false;
+            // 
+            // masa2Button
+            // 
+            this.masa2Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.masa2Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masa2Button.ForeColor = System.Drawing.Color.Snow;
+            this.masa2Button.Location = new System.Drawing.Point(261, 43);
+            this.masa2Button.Name = "masa2Button";
+            this.masa2Button.Size = new System.Drawing.Size(124, 74);
+            this.masa2Button.TabIndex = 1;
+            this.masa2Button.Text = "MASA 2";
+            this.masa2Button.UseVisualStyleBackColor = false;
+            // 
+            // masa1Button
+            // 
+            this.masa1Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.masa1Button.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masa1Button.ForeColor = System.Drawing.Color.Snow;
+            this.masa1Button.Location = new System.Drawing.Point(45, 43);
+            this.masa1Button.Name = "masa1Button";
+            this.masa1Button.Size = new System.Drawing.Size(124, 74);
+            this.masa1Button.TabIndex = 0;
+            this.masa1Button.Text = "MASA 1";
+            this.masa1Button.UseVisualStyleBackColor = false;
+            this.masa1Button.Click += new System.EventHandler(this.masa1Button_Click);
             // 
             // urunlerGroupBox
             // 
@@ -255,27 +256,26 @@
             this.urunlerGroupBox.TabStop = false;
             this.urunlerGroupBox.Text = "ÜRÜNLER";
             // 
-            // yemeklerButton
+            // pictureBox3
             // 
-            this.yemeklerButton.BackColor = System.Drawing.Color.Cyan;
-            this.yemeklerButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.yemeklerButton.Location = new System.Drawing.Point(75, 56);
-            this.yemeklerButton.Name = "yemeklerButton";
-            this.yemeklerButton.Size = new System.Drawing.Size(175, 56);
-            this.yemeklerButton.TabIndex = 0;
-            this.yemeklerButton.Text = "Yemekler";
-            this.yemeklerButton.UseVisualStyleBackColor = false;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(15, 138);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(54, 56);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
-            // tatlılarButton
+            // pictureBox1
             // 
-            this.tatlılarButton.BackColor = System.Drawing.Color.Cyan;
-            this.tatlılarButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.tatlılarButton.Location = new System.Drawing.Point(75, 138);
-            this.tatlılarButton.Name = "tatlılarButton";
-            this.tatlılarButton.Size = new System.Drawing.Size(175, 56);
-            this.tatlılarButton.TabIndex = 1;
-            this.tatlılarButton.Text = "Tatlılar";
-            this.tatlılarButton.UseVisualStyleBackColor = false;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 220);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 56);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // iceceklerButton
             // 
@@ -300,26 +300,27 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // tatlılarButton
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 220);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 56);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.tatlılarButton.BackColor = System.Drawing.Color.Cyan;
+            this.tatlılarButton.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.tatlılarButton.Location = new System.Drawing.Point(75, 138);
+            this.tatlılarButton.Name = "tatlılarButton";
+            this.tatlılarButton.Size = new System.Drawing.Size(175, 56);
+            this.tatlılarButton.TabIndex = 1;
+            this.tatlılarButton.Text = "Tatlılar";
+            this.tatlılarButton.UseVisualStyleBackColor = false;
             // 
-            // pictureBox3
+            // yemeklerButton
             // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(15, 138);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(54, 56);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.yemeklerButton.BackColor = System.Drawing.Color.Cyan;
+            this.yemeklerButton.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.yemeklerButton.Location = new System.Drawing.Point(75, 56);
+            this.yemeklerButton.Name = "yemeklerButton";
+            this.yemeklerButton.Size = new System.Drawing.Size(175, 56);
+            this.yemeklerButton.TabIndex = 0;
+            this.yemeklerButton.Text = "Yemekler";
+            this.yemeklerButton.UseVisualStyleBackColor = false;
             // 
             // Anasayfa
             // 
@@ -335,9 +336,9 @@
             this.Load += new System.EventHandler(this.Anasayfa_Load);
             this.masalarGroupBox.ResumeLayout(false);
             this.urunlerGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

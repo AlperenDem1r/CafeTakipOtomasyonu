@@ -28,7 +28,7 @@ namespace CafeTakipOtomasyonu
 
         private void uyeOlButton_Click(object sender, EventArgs e)
         {
-            if (kayıtOlSifreText.Text != kayıtOlSifreTekrarlaText.Text)
+            if (kayıtOlSifreText.Text != kayıtOlSifreTekrarlaText.Text|| kayıtOlSifreText.Text=="")
             {
                 MessageBox.Show("Şifreler uyuşmuyor lütfen tekrar deneyiniz.");
             }

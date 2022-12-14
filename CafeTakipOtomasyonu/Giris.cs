@@ -46,6 +46,7 @@ namespace CafeTakipOtomasyonu
             else
             {
                 MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre");
+                
             }
             baglantiGiris.Close();
             
@@ -56,6 +57,11 @@ namespace CafeTakipOtomasyonu
             SifreUnuttu sifreUnuttum = new SifreUnuttu();
             sifreUnuttum.Show();
 
+        }
+
+        public void girisKullaniciAdiText_TextChanged(object sender, EventArgs e)
+        {
+            string isim = girisKullaniciAdiText.Text;
         }
     }
        

@@ -86,6 +86,7 @@
             this.girisKullaniciAdiText.Name = "girisKullaniciAdiText";
             this.girisKullaniciAdiText.Size = new System.Drawing.Size(158, 22);
             this.girisKullaniciAdiText.TabIndex = 4;
+            this.girisKullaniciAdiText.TextChanged += new System.EventHandler(this.girisKullaniciAdiText_TextChanged);
             // 
             // girisSifreText
             // 
