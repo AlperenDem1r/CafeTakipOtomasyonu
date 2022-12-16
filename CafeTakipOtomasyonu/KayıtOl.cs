@@ -30,7 +30,7 @@ namespace CafeTakipOtomasyonu
 
         private void uyeOlButton_Click(object sender, EventArgs e)
         {
-            if (kayıtOlSifreText.Text != kayıtOlSifreTekrarlaText.Text || kayıtOlSifreText.Text == "")
+            if (kayıtOlSifreText.Text != kayıtOlSifreTekrarlaText.Text || kayıtOlSifreText.Text == ""||kayıtOlMailText.Text=="")
             {
                 MessageBox.Show("Şifreler uyuşmuyor veya şifre kısmını boş bıraktınız.Lütfen tekrar deneyiniz.");
             }
