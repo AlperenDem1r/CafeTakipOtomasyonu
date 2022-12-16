@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
-using System.Data.SqlClient;
 using System.Net;
 using System.Net.Mail;
 
@@ -35,7 +34,7 @@ namespace CafeTakipOtomasyonu
             cmd = new SqlCommand();
             baglantiGiris.Open();
             cmd.Connection = baglantiGiris;
-            cmd.CommandText = "Select *from tbl_Kullanicilar where Kullanıcı= '" + girisKullaniciAdiText.Text +
+            cmd.CommandText = "Select *from tbl_Kullanicilar where Mail= '" + girisMailText.Text +
                 "'And Şifre='" + girisSifreText.Text + "'";
             dr = cmd.ExecuteReader();
             if (dr.Read())
@@ -45,7 +44,7 @@ namespace CafeTakipOtomasyonu
             }
             else
             {
-                MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre");
+                MessageBox.Show("Hatalı Mail Adresi veya Şifre");
                 
             }
             baglantiGiris.Close();
@@ -61,7 +60,7 @@ namespace CafeTakipOtomasyonu
 
         public void girisKullaniciAdiText_TextChanged(object sender, EventArgs e)
         {
-            string isim = girisKullaniciAdiText.Text;
+            
         }
     }
        

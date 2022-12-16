@@ -279,9 +279,9 @@ namespace CafeTakipOtomasyonu {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class tbl_KullanicilarDataTable : global::System.Data.TypedTableBase<tbl_KullanicilarRow> {
             
-            private global::System.Data.DataColumn columnKullanıcı_Adı;
-            
             private global::System.Data.DataColumn columnŞifre;
+            
+            private global::System.Data.DataColumn columnMail;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -318,17 +318,17 @@ namespace CafeTakipOtomasyonu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Kullanıcı_AdıColumn {
+            public global::System.Data.DataColumn ŞifreColumn {
                 get {
-                    return this.columnKullanıcı_Adı;
+                    return this.columnŞifre;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ŞifreColumn {
+            public global::System.Data.DataColumn MailColumn {
                 get {
-                    return this.columnŞifre;
+                    return this.columnMail;
                 }
             }
             
@@ -369,11 +369,11 @@ namespace CafeTakipOtomasyonu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_KullanicilarRow Addtbl_KullanicilarRow(string Kullanıcı_Adı, string Şifre) {
+            public tbl_KullanicilarRow Addtbl_KullanicilarRow(string Şifre, string Mail) {
                 tbl_KullanicilarRow rowtbl_KullanicilarRow = ((tbl_KullanicilarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Kullanıcı_Adı,
-                        Şifre};
+                        Şifre,
+                        Mail};
                 rowtbl_KullanicilarRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbl_KullanicilarRow);
                 return rowtbl_KullanicilarRow;
@@ -396,19 +396,20 @@ namespace CafeTakipOtomasyonu {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnKullanıcı_Adı = base.Columns["Kullanıcı Adı"];
                 this.columnŞifre = base.Columns["Şifre"];
+                this.columnMail = base.Columns["Mail"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnKullanıcı_Adı = new global::System.Data.DataColumn("Kullanıcı Adı", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKullanıcı_Adı);
                 this.columnŞifre = new global::System.Data.DataColumn("Şifre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnŞifre);
-                this.columnKullanıcı_Adı.MaxLength = 50;
+                this.columnMail = new global::System.Data.DataColumn("Mail", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMail);
                 this.columnŞifre.MaxLength = 50;
+                this.columnMail.AllowDBNull = false;
+                this.columnMail.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -551,22 +552,6 @@ namespace CafeTakipOtomasyonu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Kullanıcı_Adı {
-                get {
-                    try {
-                        return ((string)(this[this.tabletbl_Kullanicilar.Kullanıcı_AdıColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Kullanıcı Adı\' in table \'tbl_Kullanicilar\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_Kullanicilar.Kullanıcı_AdıColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Şifre {
                 get {
                     try {
@@ -583,14 +568,13 @@ namespace CafeTakipOtomasyonu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsKullanıcı_AdıNull() {
-                return this.IsNull(this.tabletbl_Kullanicilar.Kullanıcı_AdıColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetKullanıcı_AdıNull() {
-                this[this.tabletbl_Kullanicilar.Kullanıcı_AdıColumn] = global::System.Convert.DBNull;
+            public string Mail {
+                get {
+                    return ((string)(this[this.tabletbl_Kullanicilar.MailColumn]));
+                }
+                set {
+                    this[this.tabletbl_Kullanicilar.MailColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -765,16 +749,15 @@ namespace CafeTakipOtomasyonu.KullanicilarDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "tbl_Kullanicilar";
-            tableMapping.ColumnMappings.Add("Kullanıcı Adı", "Kullanıcı Adı");
             tableMapping.ColumnMappings.Add("Şifre", "Şifre");
+            tableMapping.ColumnMappings.Add("Mail", "Mail");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_Kullanicilar] ([Kullanıcı Adı], [Şifre]) VALUES (@Kullanıc" +
-                "ı_Adı, @Şifre)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_Kullanicilar] ([Şifre], [Mail]) VALUES (@Şifre, @Mail)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Kullanıcı_Adı", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Kullanıcı Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Şifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Şifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Mail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -790,7 +773,7 @@ namespace CafeTakipOtomasyonu.KullanicilarDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Kullanıcı Adı], Şifre FROM dbo.tbl_Kullanicilar";
+            this._commandCollection[0].CommandText = "SELECT Şifre, Mail FROM tbl_Kullanicilar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -851,18 +834,18 @@ namespace CafeTakipOtomasyonu.KullanicilarDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Kullanıcı_Adı, string Şifre) {
-            if ((Kullanıcı_Adı == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Kullanıcı_Adı));
-            }
+        public virtual int Insert(string Şifre, string Mail) {
             if ((Şifre == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Şifre");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Şifre));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Şifre));
+            }
+            if ((Mail == null)) {
+                throw new global::System.ArgumentNullException("Mail");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Mail));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

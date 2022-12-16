@@ -32,7 +32,7 @@
             this.girisKullaniciAdiLabel = new System.Windows.Forms.Label();
             this.girisSifreLabel = new System.Windows.Forms.Label();
             this.girisSifreniziMiUnutunuz = new System.Windows.Forms.LinkLabel();
-            this.girisKullaniciAdiText = new System.Windows.Forms.TextBox();
+            this.girisMailText = new System.Windows.Forms.TextBox();
             this.girisSifreText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -55,9 +55,9 @@
             this.girisKullaniciAdiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.girisKullaniciAdiLabel.Location = new System.Drawing.Point(40, 49);
             this.girisKullaniciAdiLabel.Name = "girisKullaniciAdiLabel";
-            this.girisKullaniciAdiLabel.Size = new System.Drawing.Size(118, 22);
+            this.girisKullaniciAdiLabel.Size = new System.Drawing.Size(108, 22);
             this.girisKullaniciAdiLabel.TabIndex = 1;
-            this.girisKullaniciAdiLabel.Text = "Kullanıcı Adı :";
+            this.girisKullaniciAdiLabel.Text = "Mail Adresi :";
             // 
             // girisSifreLabel
             // 
@@ -80,13 +80,13 @@
             this.girisSifreniziMiUnutunuz.Text = "Şifrenizi mi unuttunuz?";
             this.girisSifreniziMiUnutunuz.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.girisSifreniziMiUnutunuz_LinkClicked);
             // 
-            // girisKullaniciAdiText
+            // girisMailText
             // 
-            this.girisKullaniciAdiText.Location = new System.Drawing.Point(210, 49);
-            this.girisKullaniciAdiText.Name = "girisKullaniciAdiText";
-            this.girisKullaniciAdiText.Size = new System.Drawing.Size(158, 22);
-            this.girisKullaniciAdiText.TabIndex = 4;
-            this.girisKullaniciAdiText.TextChanged += new System.EventHandler(this.girisKullaniciAdiText_TextChanged);
+            this.girisMailText.Location = new System.Drawing.Point(210, 49);
+            this.girisMailText.Name = "girisMailText";
+            this.girisMailText.Size = new System.Drawing.Size(158, 22);
+            this.girisMailText.TabIndex = 4;
+            this.girisMailText.TextChanged += new System.EventHandler(this.girisKullaniciAdiText_TextChanged);
             // 
             // girisSifreText
             // 
@@ -102,7 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 631);
             this.Controls.Add(this.girisSifreText);
-            this.Controls.Add(this.girisKullaniciAdiText);
+            this.Controls.Add(this.girisMailText);
             this.Controls.Add(this.girisSifreniziMiUnutunuz);
             this.Controls.Add(this.girisSifreLabel);
             this.Controls.Add(this.girisKullaniciAdiLabel);
@@ -120,7 +120,7 @@
         private System.Windows.Forms.Label girisKullaniciAdiLabel;
         private System.Windows.Forms.Label girisSifreLabel;
         private System.Windows.Forms.LinkLabel girisSifreniziMiUnutunuz;
-        private System.Windows.Forms.TextBox girisKullaniciAdiText;
+        private System.Windows.Forms.TextBox girisMailText;
         private System.Windows.Forms.TextBox girisSifreText;
     }
 }
