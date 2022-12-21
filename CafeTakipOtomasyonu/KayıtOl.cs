@@ -21,7 +21,9 @@ namespace CafeTakipOtomasyonu
         }
         SqlConnection baglantiKayit = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=Kullanicilar;Integrated Security=True");
         MailMessage eposta = new MailMessage();
+        SqlCommand cmd;
         Random rnd = new Random();
+        SqlDataReader dr;
         int sayi;
         private void kayıtOlKullaniciAdiText_TextChanged(object sender, EventArgs e)
         {
@@ -30,18 +32,34 @@ namespace CafeTakipOtomasyonu
 
         private void uyeOlButton_Click(object sender, EventArgs e)
         {
-            if (kayıtOlSifreText.Text != kayıtOlSifreTekrarlaText.Text || kayıtOlSifreText.Text == ""||kayıtOlMailText.Text=="")
+            cmd = new SqlCommand();
+            baglantiKayit.Open();
+            cmd.Connection = baglantiKayit;
+            cmd.CommandText = "Select *from tbl_Kullanicilar where Mail= '" + kayıtOlMailText.Text + "'";
+            dr = cmd.ExecuteReader();
+            
+            if (dr.Read())
             {
-                MessageBox.Show("Şifreler uyuşmuyor veya şifre kısmını boş bıraktınız.Lütfen tekrar deneyiniz.");
+                MessageBox.Show("Bu Mail Adresi Kullanımda Lütfen Başka Bir Mail Adresi Deneyiniz.");
             }
             else
             {
-                //Anasayfa kullaniciUyeOl = new Anasayfa();
-                //kullaniciUyeOl.Show();
-                MailGonder();
-                //this.Hide();                             
+                if (kayıtOlSifreText.Text != kayıtOlSifreTekrarlaText.Text || kayıtOlSifreText.Text == "" || kayıtOlMailText.Text == "")
+                {
+                    MessageBox.Show("Şifreler uyuşmuyor veya şifre kısmını boş bıraktınız.Lütfen tekrar deneyiniz.");
+                }
+                else
+                {
+                    //Anasayfa kullaniciUyeOl = new Anasayfa();
+                    //kullaniciUyeOl.Show();
+                    MailGonder();
+                    //this.Hide();                             
+                }
             }
-
+            baglantiKayit.Close();
+            
+            
+           
         }
         void MailGonder()
         {
