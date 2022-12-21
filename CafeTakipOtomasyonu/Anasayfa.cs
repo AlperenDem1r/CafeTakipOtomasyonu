@@ -25,14 +25,14 @@ namespace CafeTakipOtomasyonu
         {SqlConnection baglanti = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=Uygulama_2;Integrated Security=True");
             Giris kullaniciGirisi = new Giris();
             kullaniciGirisi.Show();
-            this.Hide();
+            
         }
 
         private void uyeOlAnasayfa_Click(object sender, EventArgs e)
         {
             KayıtOl kullaniciGirisi = new KayıtOl();
             kullaniciGirisi.Show();
-            this.Hide();
+            
         }
 
         private void Anasayfa_Load(object sender, EventArgs e)

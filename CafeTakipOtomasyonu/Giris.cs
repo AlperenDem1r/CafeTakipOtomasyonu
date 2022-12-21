@@ -27,8 +27,7 @@ namespace CafeTakipOtomasyonu
 
         private void girisYapButton_Click(object sender, EventArgs e)
         {
-            Anasayfa kullaniciGirisi1 = new Anasayfa();
-            kullaniciGirisi1.Show();
+            
 
             baglantiGiris = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=Kullanicilar;Integrated Security=True");
             cmd = new SqlCommand();

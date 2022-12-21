@@ -85,11 +85,7 @@ namespace CafeTakipOtomasyonu
             }
         }
 
-        //private void mailKontrolButton_Click(object sender, EventArgs e)
-        //{
-        //    
-
-        //}
+        
     }
 }
 //alperendemir833@gmail.com
