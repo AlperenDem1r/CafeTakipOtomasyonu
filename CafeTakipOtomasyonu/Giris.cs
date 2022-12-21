@@ -27,14 +27,12 @@ namespace CafeTakipOtomasyonu
 
         private void girisYapButton_Click(object sender, EventArgs e)
         {
-            
 
-            baglantiGiris = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=Kullanicilar;Integrated Security=True");
-            cmd = new SqlCommand();
             baglantiGiris.Open();
-            cmd.Connection = baglantiGiris;
-            cmd.CommandText = "Select *from tbl_Kullanicilar where Mail= '" + girisMailText.Text +
-                "'And Şifre='" + girisSifreText.Text + "'";
+            cmd = new SqlCommand("sp_KullaniciGiris", baglantiGiris);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@Mail", SqlDbType.VarChar,50).Value = girisMailText.Text;
+            cmd.Parameters.Add("@Sifre", SqlDbType.VarChar,50).Value = girisSifreText.Text;
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
@@ -44,10 +42,30 @@ namespace CafeTakipOtomasyonu
             else
             {
                 MessageBox.Show("Hatalı Mail Adresi veya Şifre");
-                
-            }
-            baglantiGiris.Close();
+
+            }    
+            baglantiGiris.Close();           
             
+
+
+            //    cmd = new SqlCommand();
+            //    baglantiGiris.Open();
+            //    cmd.Connection = baglantiGiris;
+            //    cmd.CommandText = "Select *from tbl_Kullanicilar where Mail= '" + girisMailText.Text +
+            //        "'And Şifre='" + girisSifreText.Text + "'";
+            //dr = cmd.ExecuteReader();
+            //if (dr.Read())
+            //{
+            //    MessageBox.Show("Giriş Başarılı");
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Hatalı Mail Adresi veya Şifre");
+
+            //}
+            //    baglantiGiris.Close();
+
         }
 
         private void girisSifreniziMiUnutunuz_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
