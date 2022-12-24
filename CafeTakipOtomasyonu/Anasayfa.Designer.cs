@@ -140,6 +140,7 @@
             this.masa9Button.TabIndex = 8;
             this.masa9Button.Text = "MASA 9";
             this.masa9Button.UseVisualStyleBackColor = false;
+            this.masa9Button.Click += new System.EventHandler(this.masa9Button_Click);
             // 
             // masa8Button
             // 
@@ -152,6 +153,7 @@
             this.masa8Button.TabIndex = 7;
             this.masa8Button.Text = "MASA 8";
             this.masa8Button.UseVisualStyleBackColor = false;
+            this.masa8Button.Click += new System.EventHandler(this.masa8Button_Click);
             // 
             // masa7Button
             // 
@@ -164,6 +166,7 @@
             this.masa7Button.TabIndex = 6;
             this.masa7Button.Text = "MASA 7";
             this.masa7Button.UseVisualStyleBackColor = false;
+            this.masa7Button.Click += new System.EventHandler(this.masa7Button_Click);
             // 
             // masa6Button
             // 
@@ -176,6 +179,7 @@
             this.masa6Button.TabIndex = 5;
             this.masa6Button.Text = "MASA 6";
             this.masa6Button.UseVisualStyleBackColor = false;
+            this.masa6Button.Click += new System.EventHandler(this.masa6Button_Click);
             // 
             // masa5Button
             // 
@@ -188,6 +192,7 @@
             this.masa5Button.TabIndex = 4;
             this.masa5Button.Text = "MASA 5";
             this.masa5Button.UseVisualStyleBackColor = false;
+            this.masa5Button.Click += new System.EventHandler(this.masa5Button_Click);
             // 
             // masa4Button
             // 
@@ -200,6 +205,7 @@
             this.masa4Button.TabIndex = 3;
             this.masa4Button.Text = "MASA 4";
             this.masa4Button.UseVisualStyleBackColor = false;
+            this.masa4Button.Click += new System.EventHandler(this.masa4Button_Click);
             // 
             // masa3Button
             // 
@@ -212,6 +218,7 @@
             this.masa3Button.TabIndex = 2;
             this.masa3Button.Text = "MASA 3";
             this.masa3Button.UseVisualStyleBackColor = false;
+            this.masa3Button.Click += new System.EventHandler(this.masa3Button_Click);
             // 
             // masa2Button
             // 
@@ -224,6 +231,7 @@
             this.masa2Button.TabIndex = 1;
             this.masa2Button.Text = "MASA 2";
             this.masa2Button.UseVisualStyleBackColor = false;
+            this.masa2Button.Click += new System.EventHandler(this.masa2Button_Click);
             // 
             // masa1Button
             // 

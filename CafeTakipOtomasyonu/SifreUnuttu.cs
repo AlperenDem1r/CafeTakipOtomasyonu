@@ -92,7 +92,7 @@ namespace CafeTakipOtomasyonu
             eposta.Subject = "Şifre Yenileme ";
             eposta.Body = "Doğrulama Kodunuz : " + sayi;
             SmtpClient smtp = new SmtpClient();
-            smtp.Credentials = new System.Net.NetworkCredential("mustafaabozaslan@hotmail.com", "Bzsln27.");
+            smtp.Credentials = new System.Net.NetworkCredential("Monsterkafe@hotmail.com", "alperen123");
             smtp.Host = "smtp.outlook.com"; //smtp.gmail.com
             smtp.EnableSsl = true;
             smtp.Port = 587;

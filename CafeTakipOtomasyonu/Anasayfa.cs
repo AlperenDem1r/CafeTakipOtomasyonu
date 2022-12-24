@@ -20,7 +20,7 @@ namespace CafeTakipOtomasyonu
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=Kullanicilar;Integrated Security=True");
+        
         private void girisAnasayfa_Click(object sender, EventArgs e)
         {SqlConnection baglanti = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=Uygulama_2;Integrated Security=True");
             Giris kullaniciGirisi = new Giris();
@@ -47,7 +47,72 @@ namespace CafeTakipOtomasyonu
 
         private void masa1Button_Click(object sender, EventArgs e)
         {
-              
+            MasaSiparis MasaSiparisi = new MasaSiparis();
+            MasaSiparisi.Show();
+
+        }
+
+        private void masa2Button_Click(object sender, EventArgs e)
+        {
+            MasaSiparis MasaSiparisi = new MasaSiparis();
+            MasaSiparisi.Show();
+
+        }
+
+        private void masa3Button_Click(object sender, EventArgs e)
+        {
+            MasaSiparis MasaSiparisi = new MasaSiparis();
+            MasaSiparisi.Show();
+
+        }
+
+        private void masa4Button_Click(object sender, EventArgs e)
+        {
+            MasaSiparis MasaSiparisi = new MasaSiparis();
+            MasaSiparisi.Show();
+
+        }
+
+        private void masa5Button_Click(object sender, EventArgs e)
+        {
+            MasaSiparis MasaSiparisi = new MasaSiparis();
+            MasaSiparisi.Show();
+
+        }
+
+        private void masa6Button_Click(object sender, EventArgs e)
+        {
+            MasaSiparis MasaSiparisi = new MasaSiparis();
+            MasaSiparisi.Show();
+
+        }
+
+        private void masa7Button_Click(object sender, EventArgs e)
+        {
+            MasaSiparis MasaSiparisi = new MasaSiparis();
+            MasaSiparisi.Show();
+
+        }
+
+        private void masa8Button_Click(object sender, EventArgs e)
+        {
+            MasaSiparis MasaSiparisi = new MasaSiparis();
+            MasaSiparisi.Show();
+
+        }
+
+        private void masa9Button_Click(object sender, EventArgs e)
+        {
+            MasaSiparis MasaSiparisi = new MasaSiparis();
+            MasaSiparisi.Show();
+
+        }
+
+        private void masa10Button_Click(object sender, EventArgs e)
+        {
+            MasaSiparis MasaSiparisi = new MasaSiparis();
+            MasaSiparisi.Show();
+
         }
     }
 }

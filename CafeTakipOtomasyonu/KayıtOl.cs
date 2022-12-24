@@ -49,11 +49,9 @@ namespace CafeTakipOtomasyonu
                     MessageBox.Show("Şifreler uyuşmuyor veya şifre kısmını boş bıraktınız.Lütfen tekrar deneyiniz.");
                 }
                 else
-                {
-                    //Anasayfa kullaniciUyeOl = new Anasayfa();
-                    //kullaniciUyeOl.Show();
+                {                                       
                     MailGonder();
-                    //this.Hide();                             
+                                              
                 }
             }
             baglantiKayit.Close();
@@ -64,12 +62,12 @@ namespace CafeTakipOtomasyonu
         void MailGonder()
         {
             sayi = rnd.Next(100000, 999999);
-            eposta.From = new MailAddress("mustafaabozaslan@hotmail.com");
+            eposta.From = new MailAddress("Monsterkafe@hotmail.com");
             eposta.To.Add(kayıtOlMailText.Text);
             eposta.Subject = "Kayıt Ol ";
             eposta.Body = "Doğrulama Kodunuz : " + sayi;
             SmtpClient smtp = new SmtpClient();
-            smtp.Credentials = new System.Net.NetworkCredential("mustafaabozaslan@hotmail.com", "Bzsln27.");
+            smtp.Credentials = new System.Net.NetworkCredential("Monsterkafe@hotmail.com", "alperen123");
             smtp.Host = "smtp.outlook.com"; //smtp.gmail.com
             smtp.EnableSsl = true;
             smtp.Port = 587;
@@ -77,7 +75,7 @@ namespace CafeTakipOtomasyonu
             MessageBox.Show("Lütfen Mail Adresinizi Kontrol Ediniz.");
             
 
-
+            //Yemek Id masaıd saat fiyat adet 
         }
 
        
@@ -87,10 +85,11 @@ namespace CafeTakipOtomasyonu
             if (kayitOlMailOnaylaText.Text == sayi.ToString())
             {
                 baglantiKayit.Open();
-                SqlCommand yeniKayıt = new SqlCommand("insert into tbl_Kullanicilar(Mail,Şifre) values (@k1,@k2)", baglantiKayit);
-                yeniKayıt.Parameters.AddWithValue("@k1", kayıtOlMailText.Text);
-                yeniKayıt.Parameters.AddWithValue("@k2", kayıtOlSifreText.Text);
-                yeniKayıt.ExecuteNonQuery();
+                cmd = new SqlCommand("sp_KullaniciKayit", baglantiKayit);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Mail", kayıtOlMailText.Text);
+                cmd.Parameters.AddWithValue("@Sifre", kayıtOlSifreText.Text);
+                cmd.ExecuteNonQuery();
                 baglantiKayit.Close();
                 MessageBox.Show("Üye Oldunuz.");
                 this.Close();
