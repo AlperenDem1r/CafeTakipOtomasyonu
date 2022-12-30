@@ -50,8 +50,7 @@ namespace CafeTakipOtomasyonu
             for (int i = 0; i < urunOzetList.Items.Count; i++)
             {
                 if (urunList.SelectedItems[0].Text == urunOzetList.Items[i].SubItems[0].Text)
-                {
-                    MessageBox.Show("Test");
+                {                  
                     urunOzetList.Items[i].SubItems[1].Text = (Convert.ToInt32(urunOzetList.Items[i].SubItems[1].Text) + 1).ToString();
                     urunOzetList.Items[i].SubItems[2].Text = (Convert.ToInt32(urunList.SelectedItems[0].SubItems[1].Text) *Convert.ToInt32(urunOzetList.Items[i].SubItems[1].Text)).ToString();
 
@@ -135,6 +134,55 @@ namespace CafeTakipOtomasyonu
                 urunList.Items.Add(urun);
             }
             baglanti.Close();
+        }
+
+        private void azaltmaButton_Click(object sender, EventArgs e)
+        {
+            string[] veri = new string[3];
+            bool durum = true;
+            int toplamTutar = 0;
+            for (int i = 0; i < urunOzetList.Items.Count; i++)
+            {
+                if (urunList.SelectedItems[0].Text == urunOzetList.Items[i].SubItems[0].Text)
+                {
+                      
+                    if (Convert.ToInt32(urunOzetList.Items[i].SubItems[1].Text) <= 1)
+                    {
+                        urunOzetList.Items[i].Remove();
+                       
+                    }
+                    else
+                    {
+           
+                        urunOzetList.Items[i].SubItems[2].Text = (Convert.ToInt32(urunOzetList.Items[i].SubItems[2].Text) -
+                            Convert.ToInt32(urunList.SelectedItems[0].SubItems[1].Text)).ToString();
+           
+                        urunOzetList.Items[i].SubItems[1].Text = (Convert.ToInt32(urunOzetList.Items[i].SubItems[1].Text) - 1).ToString();
+                      
+                    }                             
+                    durum = false;
+                }
+
+            }
+            for (int i = 0; i < urunOzetList.Items.Count; i++)
+            if (durum == true&&(urunList.SelectedItems[0].Text == urunOzetList.Items[i].SubItems[0].Text))
+            {
+                 if (Convert.ToInt32(urunOzetList.Items[i].SubItems[1].Text) >= 1)
+                 {
+                     ListViewItem urun;
+                     veri[0] = urunList.SelectedItems[0].Text;
+                     veri[1] = "0";
+                     veri[2] = urunList.SelectedItems[0].SubItems[1].Text;
+                     urun = new ListViewItem(veri);
+                     urunOzetList.Items.Add(urun);
+                 }
+            }
+            for (int i = 0; i < urunOzetList.Items.Count; i++)
+            {
+                toplamTutar += Convert.ToInt32(urunOzetList.Items[i].SubItems[2].Text);
+
+            }
+            toplamTutarText.Text = toplamTutar.ToString();
         }
     }
 }

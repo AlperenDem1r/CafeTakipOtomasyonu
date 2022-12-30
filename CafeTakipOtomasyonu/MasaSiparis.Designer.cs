@@ -183,6 +183,7 @@
             this.columnHeader4,
             this.columnHeader5});
             this.urunOzetList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.urunOzetList.FullRowSelect = true;
             this.urunOzetList.GridLines = true;
             this.urunOzetList.HideSelection = false;
             this.urunOzetList.Location = new System.Drawing.Point(570, 274);
@@ -233,6 +234,7 @@
             this.azaltmaButton.Size = new System.Drawing.Size(75, 68);
             this.azaltmaButton.TabIndex = 2;
             this.azaltmaButton.UseVisualStyleBackColor = false;
+            this.azaltmaButton.Click += new System.EventHandler(this.azaltmaButton_Click);
             // 
             // arttırmaButton
             // 
