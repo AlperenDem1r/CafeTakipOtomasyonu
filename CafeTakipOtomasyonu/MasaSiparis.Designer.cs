@@ -30,29 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasaSiparis));
             this.urunlerGroup = new System.Windows.Forms.GroupBox();
-            this.yemekButton = new System.Windows.Forms.Button();
-            this.tatlıButton = new System.Windows.Forms.Button();
-            this.icecekButton = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.icecekButton = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tatlıButton = new System.Windows.Forms.Button();
+            this.yemekButton = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.urunList = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.urunOzetList = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.azaltmaButton = new System.Windows.Forms.Button();
             this.arttırmaButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.ToplamTutarLabel = new System.Windows.Forms.Label();
             this.toplamTutarText = new System.Windows.Forms.TextBox();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button3 = new System.Windows.Forms.Button();
+            this.masayıAcButton = new System.Windows.Forms.Button();
             this.urunlerGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // urunlerGroup
@@ -68,23 +70,45 @@
             this.urunlerGroup.Location = new System.Drawing.Point(23, 48);
             this.urunlerGroup.Name = "urunlerGroup";
             this.urunlerGroup.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.urunlerGroup.Size = new System.Drawing.Size(920, 194);
+            this.urunlerGroup.Size = new System.Drawing.Size(1012, 194);
             this.urunlerGroup.TabIndex = 0;
             this.urunlerGroup.TabStop = false;
             this.urunlerGroup.Text = "ÜRÜNLER";
             // 
-            // yemekButton
+            // pictureBox1
             // 
-            this.yemekButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.yemekButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.yemekButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yemekButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.yemekButton.Location = new System.Drawing.Point(112, 75);
-            this.yemekButton.Name = "yemekButton";
-            this.yemekButton.Size = new System.Drawing.Size(178, 82);
-            this.yemekButton.TabIndex = 0;
-            this.yemekButton.Text = "YEMEKLER";
-            this.yemekButton.UseVisualStyleBackColor = false;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(636, 75);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(84, 82);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // icecekButton
+            // 
+            this.icecekButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.icecekButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.icecekButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.icecekButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.icecekButton.Location = new System.Drawing.Point(726, 75);
+            this.icecekButton.Name = "icecekButton";
+            this.icecekButton.Size = new System.Drawing.Size(178, 82);
+            this.icecekButton.TabIndex = 0;
+            this.icecekButton.Text = "İÇECEKLER";
+            this.icecekButton.UseVisualStyleBackColor = false;
+            this.icecekButton.Click += new System.EventHandler(this.icecekButton_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(330, 75);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(84, 82);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
             // 
             // tatlıButton
             // 
@@ -99,19 +123,21 @@
             this.tatlıButton.TabIndex = 0;
             this.tatlıButton.Text = "TATLILAR";
             this.tatlıButton.UseVisualStyleBackColor = false;
+            this.tatlıButton.Click += new System.EventHandler(this.tatlıButton_Click);
             // 
-            // icecekButton
+            // yemekButton
             // 
-            this.icecekButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.icecekButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.icecekButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.icecekButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.icecekButton.Location = new System.Drawing.Point(726, 75);
-            this.icecekButton.Name = "icecekButton";
-            this.icecekButton.Size = new System.Drawing.Size(178, 82);
-            this.icecekButton.TabIndex = 0;
-            this.icecekButton.Text = "İÇECEKLER";
-            this.icecekButton.UseVisualStyleBackColor = false;
+            this.yemekButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.yemekButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.yemekButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yemekButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.yemekButton.Location = new System.Drawing.Point(112, 75);
+            this.yemekButton.Name = "yemekButton";
+            this.yemekButton.Size = new System.Drawing.Size(178, 82);
+            this.yemekButton.TabIndex = 0;
+            this.yemekButton.Text = "YEMEKLER";
+            this.yemekButton.UseVisualStyleBackColor = false;
+            this.yemekButton.Click += new System.EventHandler(this.yemekButton_Click);
             // 
             // pictureBox2
             // 
@@ -124,33 +150,13 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(330, 75);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(84, 82);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(636, 75);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 82);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // urunList
             // 
             this.urunList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
             this.urunList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.urunList.FullRowSelect = true;
             this.urunList.GridLines = true;
             this.urunList.HideSelection = false;
             this.urunList.Location = new System.Drawing.Point(23, 274);
@@ -181,7 +187,7 @@
             this.urunOzetList.HideSelection = false;
             this.urunOzetList.Location = new System.Drawing.Point(570, 274);
             this.urunOzetList.Name = "urunOzetList";
-            this.urunOzetList.Size = new System.Drawing.Size(373, 209);
+            this.urunOzetList.Size = new System.Drawing.Size(465, 209);
             this.urunOzetList.TabIndex = 1;
             this.urunOzetList.UseCompatibleStateImageBehavior = false;
             this.urunOzetList.View = System.Windows.Forms.View.Details;
@@ -195,6 +201,11 @@
             // 
             this.columnHeader4.Text = "Adet";
             this.columnHeader4.Width = 95;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Fiyat";
+            this.columnHeader5.Width = 95;
             // 
             // button1
             // 
@@ -232,13 +243,14 @@
             this.arttırmaButton.Size = new System.Drawing.Size(75, 67);
             this.arttırmaButton.TabIndex = 3;
             this.arttırmaButton.UseVisualStyleBackColor = true;
+            this.arttırmaButton.Click += new System.EventHandler(this.arttırmaButton_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(766, 548);
+            this.button2.Location = new System.Drawing.Point(858, 548);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(177, 57);
             this.button2.TabIndex = 4;
@@ -249,7 +261,7 @@
             // 
             this.ToplamTutarLabel.AutoSize = true;
             this.ToplamTutarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ToplamTutarLabel.Location = new System.Drawing.Point(704, 504);
+            this.ToplamTutarLabel.Location = new System.Drawing.Point(796, 504);
             this.ToplamTutarLabel.Name = "ToplamTutarLabel";
             this.ToplamTutarLabel.Size = new System.Drawing.Size(133, 22);
             this.ToplamTutarLabel.TabIndex = 5;
@@ -257,15 +269,36 @@
             // 
             // toplamTutarText
             // 
-            this.toplamTutarText.Location = new System.Drawing.Point(843, 504);
+            this.toplamTutarText.Location = new System.Drawing.Point(935, 504);
             this.toplamTutarText.Name = "toplamTutarText";
             this.toplamTutarText.Size = new System.Drawing.Size(100, 22);
             this.toplamTutarText.TabIndex = 6;
             // 
-            // columnHeader5
+            // button3
             // 
-            this.columnHeader5.Text = "Fiyat";
-            this.columnHeader5.Width = 95;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(190, 548);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(177, 57);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "MASAYI KAPAT";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // masayıAcButton
+            // 
+            this.masayıAcButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.masayıAcButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masayıAcButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.masayıAcButton.Location = new System.Drawing.Point(23, 548);
+            this.masayıAcButton.Name = "masayıAcButton";
+            this.masayıAcButton.Size = new System.Drawing.Size(139, 57);
+            this.masayıAcButton.TabIndex = 4;
+            this.masayıAcButton.Text = "MASAYI AÇ";
+            this.masayıAcButton.UseVisualStyleBackColor = false;
+            this.masayıAcButton.Click += new System.EventHandler(this.masayıAcButton_Click);
             // 
             // MasaSiparis
             // 
@@ -274,6 +307,8 @@
             this.ClientSize = new System.Drawing.Size(1114, 662);
             this.Controls.Add(this.toplamTutarText);
             this.Controls.Add(this.ToplamTutarLabel);
+            this.Controls.Add(this.masayıAcButton);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.arttırmaButton);
             this.Controls.Add(this.azaltmaButton);
@@ -283,10 +318,11 @@
             this.Controls.Add(this.urunlerGroup);
             this.Name = "MasaSiparis";
             this.Text = "MasaSiparis";
+            this.Load += new System.EventHandler(this.MasaSiparis_Load);
             this.urunlerGroup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,5 +350,7 @@
         private System.Windows.Forms.Label ToplamTutarLabel;
         private System.Windows.Forms.TextBox toplamTutarText;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button masayıAcButton;
     }
 }

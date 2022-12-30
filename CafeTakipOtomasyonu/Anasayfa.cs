@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
-
+using System.Security.Cryptography.X509Certificates;
 
 namespace CafeTakipOtomasyonu
 {
@@ -19,10 +19,12 @@ namespace CafeTakipOtomasyonu
         {
             InitializeComponent();
         }
-
+        SqlConnection baglanti2 = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=cafeOtomasyonu;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=Uygulama_2;Integrated Security=True");
+      
         
         private void girisAnasayfa_Click(object sender, EventArgs e)
-        {SqlConnection baglanti = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=Uygulama_2;Integrated Security=True");
+        {
             Giris kullaniciGirisi = new Giris();
             kullaniciGirisi.Show();
             
@@ -47,8 +49,11 @@ namespace CafeTakipOtomasyonu
 
         private void masa1Button_Click(object sender, EventArgs e)
         {
+            
+            
             MasaSiparis MasaSiparisi = new MasaSiparis();
             MasaSiparisi.Show();
+            
 
         }
 
@@ -114,5 +119,7 @@ namespace CafeTakipOtomasyonu
             MasaSiparisi.Show();
 
         }
+
+       
     }
 }

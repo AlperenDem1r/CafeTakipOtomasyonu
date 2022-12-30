@@ -33,5 +33,16 @@ namespace CafeTakipOtomasyonu.Properties {
                 return ((string)(this["KullanicilarConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=cafeOtomasyonu;Integrated Security" +
+            "=True")]
+        public string cafeOtomasyonuConnectionString {
+            get {
+                return ((string)(this["cafeOtomasyonuConnectionString"]));
+            }
+        }
     }
 }
