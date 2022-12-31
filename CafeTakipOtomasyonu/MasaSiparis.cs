@@ -19,13 +19,16 @@ namespace CafeTakipOtomasyonu
         }
         SqlConnection baglanti = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=cafeOtomasyonu;Integrated Security=True");
         SqlDataReader dataReader;
-       
+        SqlCommand komut;
+        int k;
         private void yemekButton_Click(object sender, EventArgs e)
         {
+            k=1;
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("select * from tbl_Urunler where KatagoriID=1", baglanti);
-            
-            dataReader= komut.ExecuteReader();
+            komut = new SqlCommand("sp_Katagori", baglanti);
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.Add("@KatagoriID", SqlDbType.VarChar, 50).Value = k.ToString();
+            dataReader = komut.ExecuteReader();
             urunList.Items.Clear();
             while (dataReader.Read())                
             {
@@ -96,9 +99,11 @@ namespace CafeTakipOtomasyonu
 
         private void tatlıButton_Click(object sender, EventArgs e)
         {
+            k = 2;
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("select * from tbl_Urunler where KatagoriID=2", baglanti);
-
+            komut = new SqlCommand("sp_Katagori", baglanti);
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.Add("@KatagoriID", SqlDbType.VarChar, 50).Value = k.ToString();
             dataReader = komut.ExecuteReader();
             urunList.Items.Clear();
             while (dataReader.Read())                
@@ -118,8 +123,11 @@ namespace CafeTakipOtomasyonu
 
         private void icecekButton_Click(object sender, EventArgs e)
         {
+            k = 3;
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("select * from tbl_Urunler where KatagoriID=3", baglanti);
+            komut = new SqlCommand("sp_Katagori", baglanti);
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.Add("@KatagoriID", SqlDbType.VarChar, 50).Value = k.ToString();
 
             dataReader = komut.ExecuteReader();
             urunList.Items.Clear();
@@ -183,6 +191,13 @@ namespace CafeTakipOtomasyonu
 
             }
             toplamTutarText.Text = toplamTutar.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Siparisler siparisler = new Siparisler();
+            siparisler.Show();
+
         }
     }
 }

@@ -256,6 +256,7 @@
             this.siparislerButton.TabIndex = 3;
             this.siparislerButton.Text = "Siparişler";
             this.siparislerButton.UseVisualStyleBackColor = false;
+            this.siparislerButton.Click += new System.EventHandler(this.siparislerButton_Click);
             // 
             // Anasayfa
             // 

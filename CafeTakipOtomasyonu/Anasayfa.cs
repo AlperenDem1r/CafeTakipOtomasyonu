@@ -120,6 +120,10 @@ namespace CafeTakipOtomasyonu
 
         }
 
-       
+        private void siparislerButton_Click(object sender, EventArgs e)
+        {
+            Siparisler siparis = new Siparisler();
+            siparis.Show();
+        }
     }
 }
