@@ -126,6 +126,7 @@
             this.kayitOlMailOnaylaText.Name = "kayitOlMailOnaylaText";
             this.kayitOlMailOnaylaText.Size = new System.Drawing.Size(172, 22);
             this.kayitOlMailOnaylaText.TabIndex = 9;
+            this.kayitOlMailOnaylaText.TextChanged += new System.EventHandler(this.kayitOlMailOnaylaText_TextChanged);
             // 
             // kayitOlMailOnaylaLabel
             // 

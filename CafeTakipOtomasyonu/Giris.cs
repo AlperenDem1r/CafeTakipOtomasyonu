@@ -46,23 +46,7 @@ namespace CafeTakipOtomasyonu
             }    
             baglantiGiris.Close();
 
-            //cmd = new SqlCommand();
-            //baglantiGiris.Open();
-            //cmd.Connection = baglantiGiris;
-            //cmd.CommandText = "Select *from tbl_Kullanicilar where Mail= '" + girisMailText.Text +
-            //    "'And Şifre='" + girisSifreText.Text + "'";
-            //dr = cmd.ExecuteReader();
-            //if (dr.Read())
-            //{
-            //    MessageBox.Show("Giriş Başarılı");
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Hatalı Mail Adresi veya Şifre");
-
-            //}
-            //    baglantiGiris.Close();
+            
 
         }
 

@@ -46,43 +46,50 @@ namespace CafeTakipOtomasyonu
 
         private void arttırmaButton_Click(object sender, EventArgs e)
         {
-            
-            string[] veri=new string[3];
-            bool durum = true;
-            int toplamTutar = 0;
-            for (int i = 0; i < urunOzetList.Items.Count; i++)
+            if (urunList.SelectedItems[0].Text == "")
             {
-                if (urunList.SelectedItems[0].Text == urunOzetList.Items[i].SubItems[0].Text)
-                {                  
-                    urunOzetList.Items[i].SubItems[1].Text = (Convert.ToInt32(urunOzetList.Items[i].SubItems[1].Text) + 1).ToString();
-                    urunOzetList.Items[i].SubItems[2].Text = (Convert.ToInt32(urunList.SelectedItems[0].SubItems[1].Text) *Convert.ToInt32(urunOzetList.Items[i].SubItems[1].Text)).ToString();
+                MessageBox.Show("Lütfen Önce Ürün Seçiniz.");
+            }
+            else
+            {
 
-                    durum = false;
+
+                string[] veri = new string[3];
+                bool durum = true;
+                int toplamTutar = 0;
+                for (int i = 0; i < urunOzetList.Items.Count; i++)
+                {
+                    if (urunList.SelectedItems[0].Text == urunOzetList.Items[i].SubItems[0].Text)
+                    {
+                        urunOzetList.Items[i].SubItems[1].Text = (Convert.ToInt32(urunOzetList.Items[i].SubItems[1].Text) + 1).ToString();
+                        urunOzetList.Items[i].SubItems[2].Text = (Convert.ToInt32(urunList.SelectedItems[0].SubItems[1].Text) * Convert.ToInt32(urunOzetList.Items[i].SubItems[1].Text)).ToString();
+
+                        durum = false;
+                    }
+
+
                 }
 
+                if (durum == true)
+                {
+                    ListViewItem urun;
+                    veri[0] = urunList.SelectedItems[0].Text;
+                    veri[1] = "1";
+                    veri[2] = urunList.SelectedItems[0].SubItems[1].Text;
+                    urun = new ListViewItem(veri);
+                    urunOzetList.Items.Add(urun);
+
+                }
+
+                for (int i = 0; i < urunOzetList.Items.Count; i++)
+                {
+                    toplamTutar += Convert.ToInt32(urunOzetList.Items[i].SubItems[2].Text);
+
+                }
+                toplamTutarText.Text = toplamTutar.ToString();
 
             }
-
-            if (durum==true)
-            {
-                ListViewItem urun;
-                veri[0] = urunList.SelectedItems[0].Text;
-                veri[1] = "1";
-                veri[2] = urunList.SelectedItems[0].SubItems[1].Text;
-                urun =new ListViewItem(veri);
-                urunOzetList.Items.Add(urun);
-
-            }
-
-            for (int i = 0; i < urunOzetList.Items.Count; i++)
-            {
-                toplamTutar += Convert.ToInt32(urunOzetList.Items[i].SubItems[2].Text);
-
-            }
-            toplamTutarText.Text = toplamTutar.ToString();
-            
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
            

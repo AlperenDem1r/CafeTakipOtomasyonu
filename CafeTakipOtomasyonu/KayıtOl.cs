@@ -32,10 +32,11 @@ namespace CafeTakipOtomasyonu
 
         private void uyeOlButton_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand();
+            cmd = new SqlCommand("sp_KullaniciKontrol",baglantiKayit);
             baglantiKayit.Open();
-            cmd.Connection = baglantiKayit;
-            cmd.CommandText = "Select *from tbl_Kullanicilar where Mail= '" + kayıtOlMailText.Text + "'";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@Mail", SqlDbType.VarChar, 50).Value = kayıtOlMailText.Text;
+            
             dr = cmd.ExecuteReader();
             
             if (dr.Read())
@@ -75,7 +76,7 @@ namespace CafeTakipOtomasyonu
             MessageBox.Show("Lütfen Mail Adresinizi Kontrol Ediniz.");
             
 
-            //Yemek Id masaıd saat fiyat adet 
+           
         }
 
        
@@ -93,7 +94,7 @@ namespace CafeTakipOtomasyonu
                 baglantiKayit.Close();
                 MessageBox.Show("Üye Oldunuz.");
                 this.Close();
-                Anasayfa uye = new Anasayfa();
+                Giris uye = new Giris();
                 uye.Show();
             }
             else
@@ -101,8 +102,10 @@ namespace CafeTakipOtomasyonu
                 MessageBox.Show("kod eşleşmiyor.");
             }
         }
-
         
+        private void kayitOlMailOnaylaText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-//alperendemir833@gmail.com
