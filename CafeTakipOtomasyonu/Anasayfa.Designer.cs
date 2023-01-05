@@ -118,6 +118,7 @@
             this.masa10Button.Tag = "10";
             this.masa10Button.Text = "MASA 10";
             this.masa10Button.UseVisualStyleBackColor = false;
+            this.masa10Button.Click += new System.EventHandler(this.masa10Button_Click_1);
             // 
             // masa9Button
             // 

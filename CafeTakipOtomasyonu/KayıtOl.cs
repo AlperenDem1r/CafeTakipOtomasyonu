@@ -99,7 +99,7 @@ namespace CafeTakipOtomasyonu
             }
             else
             {
-                MessageBox.Show("kod eşleşmiyor.");
+                MessageBox.Show("Kod Eşleşmiyor.");
             }
         }
         
