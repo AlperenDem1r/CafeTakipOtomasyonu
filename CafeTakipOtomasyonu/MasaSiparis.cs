@@ -17,7 +17,7 @@ namespace CafeTakipOtomasyonu
         public MasaSiparis()
         {
             InitializeComponent();
-        }
+        }        
         SqlConnection baglanti = new SqlConnection("Data Source=ALPEREN\\SQLEXPRESS;Initial Catalog=cafeOtomasyonu;Integrated Security=True");
         SqlDataReader dataReader;
         SqlCommand komut;
@@ -119,35 +119,7 @@ namespace CafeTakipOtomasyonu
                         }
                     }
                 }
-                /*else
-                {
-                    for (int i = 0; i < adet.Count; i++)
-                    {
-                        for (int j = 0; j < urunOzetList.Items.Count; j++)
-                        {
-                            if (urunOzetList.Items[j].SubItems[0].Text == urunAdi[i].ToString())
-                            {
-                                urunOzetList.Items[j].SubItems[0].Text = "";
-                            }
-                        }
-                    }
-                    for (int i = 0; i < urunOzetList.Items.Count+1; i++)
-                    {
-                        if (urunOzetList.Items[i].SubItems[0].Text!="")
-                        {
-
-                            SqlCommand komut = new SqlCommand();
-                            baglanti.Open();
-                            komut.Connection = baglanti;
-                            komut.CommandText = "delete from tbl_Siparişler where MasaID=@masaid and Urunler=@urunler and HesapDurum='False'";
-                            komut.Parameters.AddWithValue("@masaid", Anasayfa.masaId);
-                            komut.Parameters.AddWithValue("@urunler", urunOzetList.Items[i].SubItems[0].Text);
-                            komut.ExecuteNonQuery();
-                            baglanti.Close();
-                        }
-                    }
-                    
-                }*/
+               
               
             }
             else
@@ -168,19 +140,9 @@ namespace CafeTakipOtomasyonu
                         baglanti.Close();
                     }
                 }
+
             }
-           /* SqlCommand komut = new SqlCommand();
-            baglanti.Open();
-            komut.Connection = baglanti;
-            komut.CommandText = "insert into tbl_Siparisler(MasaID,Urunler,Tutar,Tarih,Saat,HesapDurum) values(@masaid,@urunler,@tutar,@tarih,@saat,@hesapdurum)";
-            komut.Parameters.AddWithValue("@masaid", Anasayfa.masaId);
-            komut.Parameters.AddWithValue("@urunler", urunOzetList.Items[j].SubItems[1].Text + "-" + urunOzetList.Items[j].SubItems[0].Text);
-            komut.Parameters.AddWithValue("@tutar", urunOzetList.Items[j].SubItems[2].Text);
-            komut.Parameters.AddWithValue("@tarih", DateTime.Now.Date);
-            komut.Parameters.AddWithValue("@saat", DateTime.Now.ToString("HH:mm"));
-            komut.Parameters.AddWithValue("@hesapdurum", false);
-            komut.ExecuteNonQuery();
-            baglanti.Close();*/
+        
         }
 
         ArrayList adet = new ArrayList();
@@ -188,7 +150,7 @@ namespace CafeTakipOtomasyonu
         private void MasaSiparis_Load(object sender, EventArgs e)
         {
 
-           
+            int toplamTutar = 0;
             urunOzetList.Items.Clear();
             SqlCommand komut = new SqlCommand();
             baglanti.Open();
@@ -209,13 +171,18 @@ namespace CafeTakipOtomasyonu
                 urun = new ListViewItem(veri);
                 urunOzetList.Items.Add(urun);
             }
+            for (int i = 0; i < urunOzetList.Items.Count; i++)
+            {
+                toplamTutar += Convert.ToInt32(urunOzetList.Items[i].SubItems[2].Text);
+
+            }
+            toplamTutarText.Text = toplamTutar.ToString();
+
             baglanti.Close();
 
         }
 
-        private void masayıAcButton_Click(object sender, EventArgs e)
-        {
-        }
+     
 
         private void tatlıButton_Click(object sender, EventArgs e)
         {
@@ -331,24 +298,42 @@ namespace CafeTakipOtomasyonu
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             SqlCommand komut = new SqlCommand();
             baglanti.Open();
             komut.Connection = baglanti;
             komut.CommandText = "update tbl_Siparisler set HesapDurum='True' where MasaID=@masaid";
-            komut.Parameters.AddWithValue("@masaid", Anasayfa.masaId);
+            komut.Parameters.AddWithValue("@masaid", Anasayfa.masaId);         
+            komut.ExecuteNonQuery();
+            baglanti.Close();            
+            baglanti.Open();
+            komut.Connection = baglanti;
+            komut.CommandText = "update tbl_MasaDurumu set Durum='True' where MasaID=@masaid2";
+            komut.Parameters.AddWithValue("@masaid2", Anasayfa.masaId);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            this.Close();
-            //Siparisler siparisler = new Siparisler();
-           //siparisler.Show();
-
+            this.Hide();
+            Anasayfa anasayfa = new Anasayfa();
+            anasayfa.ShowDialog();
         }
-
+        
         private void MasaSiparis_FormClosing(object sender, FormClosingEventArgs e)
         {
 
+            if (urunOzetList.Items.Count!=0)
+            {
+                SqlCommand komut = new SqlCommand();
+                baglanti.Open();
+                komut.Connection = baglanti;
+                komut.CommandText = "update tbl_MasaDurumu set Durum='False' where MasaID=@masaid";
+                komut.Parameters.AddWithValue("@masaid", Anasayfa.masaId);                
+                komut.ExecuteNonQuery();
+                baglanti.Close();
 
-            MessageBox.Show("Hesabı Kaydettiğinizden emin olun.");
+            }
+            this.Hide();
+            Anasayfa anasayfa = new Anasayfa();
+            anasayfa.ShowDialog();
 
 
         }
